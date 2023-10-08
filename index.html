@@ -9,67 +9,43 @@
 
     <style>
         /* CSS Responsif */
-        @media (max-width: 768px) {
-            /* Nav Link */
+     @media (max-width: 768px) {
             .nav-link {
-                font-size: 14px; /* Ukuran font yang lebih kecil untuk perangkat mobile */
+                font-size: 14px;
             }
 
-            /* Hero Section */
-            #home {
-                height: auto; /* Menghapus tinggi 100vh pada perangkat mobile */
-                padding: 20px; /* Menambahkan padding pada perangkat mobile */
+            /* Tampilkan tombol navigasi dan sembunyikan menu saat di mobile */
+            .nav-toggle {
+                display: block;
             }
 
-            /* About Section */
-            #about {
-                padding: 20px; /* Menambahkan padding pada perangkat mobile */
+            .hidden-mobile {
+                display: none;
             }
 
-            /* Team Section */
-            #team .w-full {
-                width: 100%; /* Lebar penuh pada perangkat mobile */
+            .scrolling-navbar {
+                width: 100%;
+                left: 0;
+                right: 0;
             }
-        }
 
-        /* CSS Desktop (Opsional) */
-        @media (min-width: 769px) {
-            /* Tambahkan CSS khusus untuk tampilan desktop di sini */
-        }
-        .scrolling-navbar {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+            /* Atur ulang tata letak menu drop-down */
+            .mobile-menu {
+                display: none;
+                position: absolute;
+                top: 64px;
+                /* Sesuaikan dengan tinggi navbar Anda */
+                right: 0;
+                left: 0;
+                background-color: #ffffff;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                z-index: 10;
+            }
 
-        .nav-link {
-            text-decoration: none;
-            /* color: #333; */
-        }
-
-        .nav-link:hover {
-            color: #007bff;
-            transition: color 0.3s ease;
-        }
-
-        .active {
-            color: #007bff;
-        }
-
-        #home {
-            height: 100vh;
-        }
-
-        #about {
-            height: 100vh;
-        }
-
-        #team {
-            height: 100vh;
-        }
-
-        #contact {
-            height: 100vh;
-            width: 100vh;
-            /* padding-top: 50rem; */
+            .nav-toggle.active+.mobile-menu {
+                display: block;
+            }
         }
     </style>
 </head>
