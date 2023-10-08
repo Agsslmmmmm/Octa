@@ -8,6 +8,34 @@
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
 
     <style>
+        /* CSS Responsif */
+        @media (max-width: 768px) {
+            /* Nav Link */
+            .nav-link {
+                font-size: 14px; /* Ukuran font yang lebih kecil untuk perangkat mobile */
+            }
+
+            /* Hero Section */
+            #home {
+                height: auto; /* Menghapus tinggi 100vh pada perangkat mobile */
+                padding: 20px; /* Menambahkan padding pada perangkat mobile */
+            }
+
+            /* About Section */
+            #about {
+                padding: 20px; /* Menambahkan padding pada perangkat mobile */
+            }
+
+            /* Team Section */
+            #team .w-full {
+                width: 100%; /* Lebar penuh pada perangkat mobile */
+            }
+        }
+
+        /* CSS Desktop (Opsional) */
+        @media (min-width: 769px) {
+            /* Tambahkan CSS khusus untuk tampilan desktop di sini */
+        }
         .scrolling-navbar {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
