@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <style>
+        .scrolling-navbar {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            /* color: #333; */
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        .active {
+            color: #007bff;
+        }
+
+        #home {
+            height: 100vh;
+        }
+
+        #about {
+            height: 100vh;
+        }
+
+        #team {
+            height: 100vh;
+        }
+
+        #contact {
+            height: 100vh;
+            width: 100vh;
+            /* padding-top: 50rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="fixed top-5 left-0 right-0">
+        <nav
+            class="border border-b bg-gradient-to-r from-blue-400 to-blue-500 rounded-full p-4 shadow-lg hover:scale-110 transition-transform duration-500 w-[90%] mx-auto scrolling-navbar bg-white">
+            <ul class="flex space-x-4 items-center justify-center">
+                <li><a href="#home" class="nav-link uppercase text-gray-400">Home</a></li>
+                <li><a href="#about" class="nav-link uppercase text-gray-400">About</a></li>
+                <li><a href="#team" class="nav-link uppercase text-gray-400">Team</a></li>
+                <li><a href="#contact" class="nav-link uppercase text-gray-400">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- Akhir Navbar -->
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-10 w-full h-full">
+        <div class="hero flex flex-col justify-center items-center w-full h-full">
+            <img src="octa-tech.svg" alt="OctaTech Logo" class="w-16 h-16 mb-4">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-700">Octa<span
+                        class="text-blue-600">Tech</span></h1>
+                <p class="text-lg md:text-xl mt-4 px-4 text-gray-500">
+                    <!-- Menambahkan padding pada sisi kiri dan kanan -->
+                    OctaTech is an innovative technology company dedicated to changing the world through advanced
+                    technology solutions. We were founded with a vision to bridge technology gaps, deliver beneficial
+                    innovations, and empower businesses and individuals to reach their full potential.
+                </p>
+                <div class="mt-8 ">
+                        <a href="form.html"
+                        class="border hover:bg-blue-500 hover:text-white  shadow-lg text-gray-500 py-3 px-6 rounded-full font-bold text-lg md:text-xl lg:text-2xl transition duration-500 ease-in-out sm:mt-4">Join
+                        Us</a>
+                    <!-- Menambahkan margin atas (top margin) pada tampilan mobile (sm:mt-4) -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="py-16 mt-24">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-semibold text-gray-700">About OctaTech</h2>
+                <p class="text-lg text-gray-500 mt-4 px-4">
+                    OctaTech is a leading technology company that is dedicated to driving innovation and solving complex
+                    problems through cutting-edge technology solutions. Our journey began with a simple yet powerful
+                    vision: to transform industries, empower individuals, and make a positive impact on the world.
+                </p>
+                <p class="mt-4 px-4 text-lg text-gray-500">
+                    With a team of passionate experts in various fields of technology, we work tirelessly to develop
+                    software, applications, and solutions that are at the forefront of technological advancement. Our
+                    commitment to excellence, innovation, and client satisfaction drives everything we do.
+                </p>
+                <p class="mt-4 px-4 text-lg text-gray-500">
+                    At OctaTech, we believe that technology has the power to shape the future. Whether it's creating
+                    user-friendly applications, enhancing cybersecurity, or harnessing the potential of artificial
+                    intelligence, we are dedicated to pushing the boundaries of what is possible.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir About Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="my-16 mt-24">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-500 mb-6">Meet Our Team</h2>
+            <div class="flex flex-wrap -mx-4">
+                <!-- Team Member 1 -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="rounded-lg shadow-lg p-6 hover:scale-110 transition-transform duration-500" onclick={}>
+                        <img src="./img/gambar1.jpg" alt="Team Member 2" class="rounded-full w-32 h-32 mx-auto mb-4" />
+                        <h3 class="text-xl font-semibold text-gray-400">Jane Smith</h3>
+                        <p class="text-gray-500 font-bold">Developer</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="rounded-lg shadow-lg p-6 hover:scale-110 transition-transform duration-500" onclick={}>
+                        <img src="./img/gambar1.jpg" alt="Team Member 2" class="rounded-full w-32 h-32 mx-auto mb-4" />
+                        <h3 class="text-xl font-semibold text-gray-400">John Doe</h3>
+                        <p class="text-gray-500 font-bold">Designer</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+    </section>
+    <!-- Akhir Team Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center justify-center">Contact Us</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center justify-center items-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Send Us a Message</h3>
+                    <form class="text-center justify-center">
+                        <!-- Nama -->
+                        <div class="mb-4">
+                            <input type="text"
+                                class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                                placeholder="Your Name">
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <input type="email"
+                                class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                                placeholder="Your Email">
+                        </div>
+                        <!-- Pesan -->
+                        <div class="mb-4">
+                            <textarea
+                                class="w-full px-4 py-2 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                                rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <!-- Tombol Kirim -->
+                        <button type="submit"
+                            class="bg-blue-500 text-white hover:bg-blue-600 py-2 px-4 rounded-lg">Send</button>
+                    </form>
+                </div>
+
+                <!-- Informasi Kontak -->
+                <div class="bg-white rounded-lg shadow-lg p-2 text-center items-center justify-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                    <ul class="text-gray-600">
+                        <li class="mb-2">
+                            <i class="fas fa-phone-alt mr-2"></i> +6282258397547
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope mr-2"></i> daenk254@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Contact Section -->
+
+    <script>
+        const scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000, // Kecepatan scroll (ms)
+            easing: 'easeInOutCubic' // Jenis efek animasi
+        });
+
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Hilangkan kelas "active" dari semua link
+                navLinks.forEach(navLink => navLink.classList.remove('active'));
+
+                // Tambahkan kelas "active" ke link yang diklik
+                link.classList.add('active');
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Mengambil data dari formulir
+                const name = form.querySelector('input[name="name"]').value;
+                const email = form.querySelector('input[name="email"]').value;
+
+                // Kirim permintaan POST ke server
+                fetch(form.getAttribute("action"), {
+                    method: "POST",
+                    body: JSON.stringify({ name, email }),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        // Menampilkan pesan balasan dari server
+                        if (data.error) {
+                            // Menampilkan pesan error jika ada
+                            alert(data.error);
+                        } else if (data.message) {
+                            // Menampilkan pesan sukses jika ada
+                            alert(data.message);
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Terjadi kesalahan:", error);
+                    });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

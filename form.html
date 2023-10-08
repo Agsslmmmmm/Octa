@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4">Formulir</h2>
+
+    <form id="myForm" method="post">
+      <div class="mb-4">
+        <label for="nama" class="block text-gray-600">Nama Anda:</label>
+        <input type="text" name="nama" id="nama"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-400" placeholder="Nama Anda" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-gray-600">Email Anda:</label>
+        <input type="email" name="email" id="email"
+          class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-400" placeholder="Email Anda" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="alamat" class="block text-gray-600">Alamat Anda:</label>
+        <textarea name="alamat" id="alamat" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-400"
+          placeholder="Alamat Anda" required></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="button" onclick="processForm()"
+          class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Kirim</button>
+      </div>
+    </form>
+
+    <div id="response" class="mt-4"></div>
+
+    <script>
+      function processForm() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var alamat = document.getElementById("alamat").value;
+
+        // Kirim data ke server atau lakukan tindakan lain sesuai kebutuhan Anda
+
+        // Misalnya, Anda dapat menggunakan AJAX untuk mengirim data ke backend PHP
+        var data = {
+          nama: nama,
+          email: email,
+          alamat: alamat
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "proses.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // Proses respons dari server
+            console.log(xhr.responseText);
+          }
+        };
+
+        var jsonData = JSON.stringify(data);
+        xhr.send(jsonData);
+
+      }
+    </script>
+
+
+  </div>
+</body>
+
+</html>
